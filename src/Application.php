@@ -16,6 +16,8 @@ declare(strict_types=1);
  */
 namespace App;
 
+use App\Utility\Github\RateLimit;
+use App\Utility\Github\RateLimitInterface;
 use Cake\Core\Configure;
 use Cake\Core\ContainerInterface;
 use Cake\Datasource\FactoryLocator;
@@ -103,5 +105,6 @@ class Application extends BaseApplication
      */
     public function services(ContainerInterface $container): void
     {
+        $container->add(RateLimitInterface::class, RateLimit::class);
     }
 }
