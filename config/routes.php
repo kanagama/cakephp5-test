@@ -49,6 +49,11 @@ return function (RouteBuilder $routes): void {
      */
     $routes->setRouteClass(DashedRoute::class);
 
+    $routes->scope('/api/github', function (RouteBuilder $routes): void {
+        $routes->connect('/rate_limit', ['prefix' => 'Api/Github', 'controller' => 'RateLimit', 'action' => 'index',]);
+        $routes->connect('/user', ['prefix' => 'Api/Github', 'controller' => 'User', 'action' => 'index',]);
+    });
+
     $routes->scope('/', function (RouteBuilder $builder): void {
         /*
          * Here, we are connecting '/' (base path) to a controller called 'Pages',

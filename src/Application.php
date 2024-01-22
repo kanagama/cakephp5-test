@@ -18,6 +18,8 @@ namespace App;
 
 use App\Utility\Github\RateLimit;
 use App\Utility\Github\RateLimitInterface;
+use App\Utility\Github\User;
+use App\Utility\Github\UserInterface;
 use Cake\Core\Configure;
 use Cake\Core\ContainerInterface;
 use Cake\Datasource\FactoryLocator;
@@ -106,5 +108,6 @@ class Application extends BaseApplication
     public function services(ContainerInterface $container): void
     {
         $container->add(RateLimitInterface::class, RateLimit::class);
+        $container->add(UserInterface::class, User::class);
     }
 }

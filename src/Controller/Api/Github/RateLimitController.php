@@ -14,23 +14,23 @@ declare(strict_types=1);
  * @since         3.3.4
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
-namespace App\Controller;
+namespace App\Controller\Api\Github;
 
+use App\Controller\AppController;
 use App\Utility\Github\RateLimit;
 use App\Utility\Github\RateLimitInterface;
-use Cake\Event\EventInterface;
 
 /**
- * Error Handling Controller
+ * RateLimitController
  *
  * Controller used by ExceptionRenderer to render error responses.
  */
-class GithubController extends AppController
+class RateLimitController extends AppController
 {
     /**
-     * @param  RateLimitInterface  $rateLimit
+     * @param  RateLimit  $rateLimit
      */
-    public function rateLimit(
+    public function index(
         RateLimitInterface $rateLimit
     ) {
         $response = $rateLimit->get();
