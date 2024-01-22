@@ -19,17 +19,148 @@ class Users extends AbstractMigration
     {
         $table = $this->table('users');
 
+        $table->addColumn('login', 'string', [
+            'limit' => 255,
+            'null'  => false,
+        ]);
+
+        $table->addColumn('node_id', 'string', [
+            'limit' => 255,
+            'null'  => false,
+        ]);
+
+        $table->addColumn('avatar_url', 'text', [
+            'null' => false,
+        ]);
+
+        $table->addColumn('gravatar_id', 'string', [
+            'limit' => 255,
+            'null'  => true,
+        ]);
+
+        $table->addColumn('url', 'text', [
+            'null' => false,
+        ]);
+
+        $table->addColumn('html_url', 'text', [
+            'null' => false,
+        ]);
+
+        $table->addColumn('followers_url', 'text', [
+            'null' => false,
+        ]);
+
+        $table->addColumn('following_url', 'text', [
+            'null' => false,
+        ]);
+
+        $table->addColumn('gists_url', 'text', [
+            'null' => false,
+        ]);
+
+        $table->addColumn('starred_url', 'text', [
+            'null' => false,
+        ]);
+
+        $table->addColumn('subscriptions_url', 'text', [
+            'null' => false,
+        ]);
+
+        $table->addColumn('organizations_url', 'text', [
+            'null' => false,
+        ]);
+
+        $table->addColumn('repos_url', 'text', [
+            'null' => false,
+        ]);
+
+        $table->addColumn('events_url', 'text', [
+            'null' => false,
+        ]);
+
+        $table->addColumn('received_events_url', 'text', [
+            'null' => false,
+        ]);
+
+        $table->addColumn('type', 'string', [
+            'limit' => '128',
+            'null'  => false,
+        ]);
+
+        $table->addColumn('site_admin', 'boolean', [
+            'null'  => false,
+        ]);
+
         $table->addColumn('name', 'string', [
-            'limit'   => 255,
-            'null'    => false,
+            'limit' => 255,
+            'null'  => false,
         ]);
+
+        $table->addColumn('company', 'string', [
+            'limit' => 255,
+            'null'  => false,
+        ]);
+
+        $table->addColumn('blog', 'string', [
+            'limit' => 255,
+            'null'  => false,
+        ]);
+
+        $table->addColumn('location', 'text', [
+            'limit' => 255,
+            'null'  => false,
+        ]);
+
+        $table->addColumn('location', 'text', [
+            'null'  => false,
+        ]);
+
+        $table->addColumn('bio', 'string', [
+            'limit' => 255,
+            'null'  => false,
+        ]);
+
+        $table->addColumn('email', 'string', [
+            'limit' => 255,
+            'null'  => false,
+        ]);
+
+        $table->addColumn('hireable', 'string', [
+            'limit' => 255,
+            'null'  => false,
+        ]);
+
+        $table->addColumn('twitter_username', 'string', [
+            'limit' => 255,
+            'null'  => false,
+        ]);
+
+        $table->addColumn('public_repos', 'integer', [
+            'null'   => false,
+            'signed' => true,
+        ]);
+
+        $table->addColumn('public_gists', 'integer', [
+            'null'   => false,
+            'signed' => true,
+        ]);
+
+        $table->addColumn('followers', 'integer', [
+            'null' => false,
+            'signed' => true,
+        ]);
+
+        $table->addColumn('following', 'integer', [
+            'null'   => false,
+            'signed' => true,
+        ]);
+
         $table->addColumn('created', 'datetime', [
-            'default' => null,
-            'null'    => false,
+            'null' => false,
         ]);
+
         $table->addColumn('modified', 'datetime', [
-            'default' => null,
-            'null'    => false,
+            'null' => false,
         ]);
 
         $table->create();

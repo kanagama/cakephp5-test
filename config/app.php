@@ -97,8 +97,8 @@ return [
     'Cache' => [
         'default' => [
             'className' => FileEngine::class,
-            'path' => CACHE,
-            'url' => env('CACHE_DEFAULT_URL', null),
+            'path'      => CACHE,
+            'url'       => env('CACHE_DEFAULT_URL', null),
         ],
 
         /*
@@ -109,11 +109,11 @@ return [
          */
         '_cake_core_' => [
             'className' => FileEngine::class,
-            'prefix' => 'myapp_cake_core_',
-            'path' => CACHE . 'persistent' . DS,
+            'prefix'    => 'myapp_cake_core_',
+            'path'      => CACHE . 'persistent' . DS,
             'serialize' => true,
-            'duration' => '+1 years',
-            'url' => env('CACHE_CAKECORE_URL', null),
+            'duration'  => '+1 years',
+            'url'       => env('CACHE_CAKECORE_URL', null),
         ],
 
         /*
@@ -124,11 +124,11 @@ return [
          */
         '_cake_model_' => [
             'className' => FileEngine::class,
-            'prefix' => 'myapp_cake_model_',
-            'path' => CACHE . 'models' . DS,
+            'prefix'    => 'myapp_cake_model_',
+            'path'      => CACHE . 'models' . DS,
             'serialize' => true,
-            'duration' => '+1 years',
-            'url' => env('CACHE_CAKEMODEL_URL', null),
+            'duration'  => '+1 years',
+            'url'       => env('CACHE_CAKEMODEL_URL', null),
         ],
     ],
 
@@ -245,7 +245,7 @@ return [
     'Email' => [
         'default' => [
             'transport' => 'default',
-            'from' => 'you@localhost',
+            'from'      => 'you@localhost',
             /*
              * Will by default be set to config value of App.encoding, if that exists otherwise to UTF-8.
              */
@@ -279,10 +279,10 @@ return [
          * in app_local.php depending on the applications needs.
          */
         'default' => [
-            'className' => Connection::class,
-            'driver' => Mysql::class,
+            'className'  => Connection::class,
+            'driver'     => Mysql::class,
             'persistent' => false,
-            'timezone' => 'UTC',
+            'timezone'   => 'Asia/Tokyo',
 
             /*
              * For MariaDB/MySQL the internal default changed from utf8 to utf8mb4, aka full utf-8 support, in CakePHP 3.6
@@ -322,15 +322,15 @@ return [
          * The test connection is used during the test suite.
          */
         'test' => [
-            'className' => Connection::class,
-            'driver' => Mysql::class,
-            'persistent' => false,
-            'timezone' => 'UTC',
-            //'encoding' => 'utf8mb4',
-            'flags' => [],
-            'cacheMetadata' => true,
+            'className'        => Connection::class,
+            'driver'           => Mysql::class,
+            'persistent'       => false,
+            'timezone'         => 'Asia/Tokyo',
+            // 'encoding'          => 'utf8mb4',
+            'flags'            => [],
+            'cacheMetadata'    => true,
             'quoteIdentifiers' => false,
-            'log' => false,
+            'log'              => false,
             //'init' => ['SET GLOBAL innodb_stats_on_metadata = 0'],
         ],
     ],
@@ -341,27 +341,37 @@ return [
     'Log' => [
         'debug' => [
             'className' => FileLog::class,
-            'path' => LOGS,
-            'file' => 'debug',
-            'url' => env('LOG_DEBUG_URL', null),
-            'scopes' => null,
-            'levels' => ['notice', 'info', 'debug'],
+            'path'      => LOGS,
+            'file'      => 'debug',
+            'url'       => env('LOG_DEBUG_URL', null),
+            'scopes'    => null,
+            'levels' => [
+                'notice',
+                'info',
+                'debug',
+            ],
         ],
         'error' => [
             'className' => FileLog::class,
-            'path' => LOGS,
-            'file' => 'error',
-            'url' => env('LOG_ERROR_URL', null),
-            'scopes' => null,
-            'levels' => ['warning', 'error', 'critical', 'alert', 'emergency'],
+            'path'      => LOGS,
+            'file'      => 'error',
+            'url'       => env('LOG_ERROR_URL', null),
+            'scopes'    => null,
+            'levels' => [
+                'warning',
+                'error',
+                'critical',
+                'alert',
+                'emergency',
+            ],
         ],
         // To enable this dedicated query log, you need set your datasource's log flag to true
         'queries' => [
             'className' => FileLog::class,
-            'path' => LOGS,
-            'file' => 'queries',
-            'url' => env('LOG_QUERIES_URL', null),
-            'scopes' => ['cake.database.queries'],
+            'path'      => LOGS,
+            'file'      => 'queries',
+            'url'       => env('LOG_QUERIES_URL', null),
+            'scopes'    => ['cake.database.queries'],
         ],
     ],
 
