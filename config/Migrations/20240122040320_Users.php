@@ -20,8 +20,9 @@ class Users extends AbstractMigration
         $table = $this->table('users');
 
         $table->addColumn('login', 'string', [
-            'limit' => 255,
-            'null'  => false,
+            'limit'   => 255,
+            'null'    => false,
+            'comment' => 'ログインユーザー名',
         ]);
 
         $table->addColumn('node_id', 'string', [
@@ -83,7 +84,7 @@ class Users extends AbstractMigration
         ]);
 
         $table->addColumn('type', 'string', [
-            'limit' => '128',
+            'limit' => 128,
             'null'  => false,
         ]);
 
@@ -102,11 +103,6 @@ class Users extends AbstractMigration
         ]);
 
         $table->addColumn('blog', 'string', [
-            'limit' => 255,
-            'null'  => false,
-        ]);
-
-        $table->addColumn('location', 'text', [
             'limit' => 255,
             'null'  => false,
         ]);
@@ -131,36 +127,43 @@ class Users extends AbstractMigration
         ]);
 
         $table->addColumn('twitter_username', 'string', [
-            'limit' => 255,
-            'null'  => false,
+            'limit'  => 255,
+            'null'   => false,
+            'comment' => '登録X(Twitter)ユーザー名',
         ]);
 
         $table->addColumn('public_repos', 'integer', [
-            'null'   => false,
-            'signed' => true,
+            'null'    => false,
+            'signed'  => true,
+            'comment' => '公開リポジトリ数',
         ]);
 
         $table->addColumn('public_gists', 'integer', [
-            'null'   => false,
-            'signed' => true,
+            'null'    => false,
+            'signed'  => true,
+            'comment' => '公開gist数',
         ]);
 
         $table->addColumn('followers', 'integer', [
-            'null' => false,
-            'signed' => true,
+            'null'    => false,
+            'signed'  => true,
+            'comment' => 'フォロワー数',
         ]);
 
         $table->addColumn('following', 'integer', [
-            'null'   => false,
-            'signed' => true,
+            'null'    => false,
+            'signed'  => true,
+            'comment' => 'フォロー数',
         ]);
 
         $table->addColumn('created', 'datetime', [
-            'null' => false,
+            'null'    => false,
+            'comment' => '登録日時',
         ]);
 
         $table->addColumn('modified', 'datetime', [
-            'null' => false,
+            'null'    => false,
+            'comment' => '更新日時',
         ]);
 
         $table->create();
