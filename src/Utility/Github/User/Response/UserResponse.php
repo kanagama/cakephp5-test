@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Utility\Github\Response;
+namespace App\Utility\Github\User\Response;
 
 use Cake\I18n\DateTime;
 use stdClass;

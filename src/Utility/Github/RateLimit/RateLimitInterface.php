@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Utility\Github;
+namespace App\Utility\Github\RateLimit;
 
-use App\Utility\Github\Response\RateLimitResponse;
+use App\Utility\Github\RateLimit\Response\RateLimitResponse;
 use RuntimeException;
 
 /**

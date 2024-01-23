@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Utility\Github;
+namespace App\Utility\Github\User;
 
-use App\Utility\Github\Response\UserResponse;
+use App\Utility\Github\User\Response\UserResponse;
 use RuntimeException;
 
 /**

@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Utility\Github\ValueObject\RateLimit;
+namespace App\Utility\Github\RateLimit\ValueObject;
 
-use App\Utility\Github\ValueObject\RateLimit\ActionsRunnerRegistration;
-use App\Utility\Github\ValueObject\RateLimit\AuditLog;
-use App\Utility\Github\ValueObject\RateLimit\CodeScanningUpload;
-use App\Utility\Github\ValueObject\RateLimit\CodeSearch;
-use App\Utility\Github\ValueObject\RateLimit\Core;
-use App\Utility\Github\ValueObject\RateLimit\DependencySnapshots;
-use App\Utility\Github\ValueObject\RateLimit\Graphql;
-use App\Utility\Github\ValueObject\RateLimit\IntegrationManifest;
-use App\Utility\Github\ValueObject\RateLimit\Scim;
-use App\Utility\Github\ValueObject\RateLimit\Search;
-use App\Utility\Github\ValueObject\RateLimit\SourceImport;
+use App\Utility\Github\RateLimit\ValueObject\ActionsRunnerRegistration;
+use App\Utility\Github\RateLimit\ValueObject\AuditLog;
+use App\Utility\Github\RateLimit\ValueObject\CodeScanningUpload;
+use App\Utility\Github\RateLimit\ValueObject\CodeSearch;
+use App\Utility\Github\RateLimit\ValueObject\Core;
+use App\Utility\Github\RateLimit\ValueObject\DependencySnapshots;
+use App\Utility\Github\RateLimit\ValueObject\Graphql;
+use App\Utility\Github\RateLimit\ValueObject\IntegrationManifest;
+use App\Utility\Github\RateLimit\ValueObject\Scim;
+use App\Utility\Github\RateLimit\ValueObject\Search;
+use App\Utility\Github\RateLimit\ValueObject\SourceImport;
 use stdClass;
 
 /**

@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Utility\Github\Response;
+namespace App\Utility\Github\RateLimit\Response;
 
-use App\Utility\Github\ValueObject\RateLimit\Rate;
-use App\Utility\Github\ValueObject\RateLimit\Resources;
+use App\Utility\Github\RateLimit\ValueObject\Rate;
+use App\Utility\Github\RateLimit\ValueObject\Resources;
 use stdClass;
 
 /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Utility\Github\ValueObject\RateLimit;
+namespace App\Utility\Github\RateLimit\ValueObject;
 
 /**
  * @property-read int $limit
@@ -8,7 +8,7 @@ namespace App\Utility\Github\ValueObject\RateLimit;
  * @property-read int $remaining
  * @property-read int $reset
  */
-final class Scim
+final class DependencySnapshots
 {
     /**
      * @param  int  $limit

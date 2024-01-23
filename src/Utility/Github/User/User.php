@@ -1,27 +1,27 @@
 <?php
 
-namespace App\Utility\Github;
+namespace App\Utility\Github\User;
 
 use Cake\Core\Configure;
 use Cake\Http\Client;
 use Cake\Http\Client\Request;
 use Cake\Http\Client\Response;
-use App\Utility\Github\Response\RateLimitResponse;
+use App\Utility\Github\User\Response\UserResponse;
 use RuntimeException;
 
 /**
- * 認証済みユーザのレート制限ステータスを取得する
+ * githubユーザ情報を取得する
  */
-final class RateLimit implements RateLimitInterface
+final class User implements UserInterface
 {
     /**
-     * @return RateLimitResponse
+     * @return UserResponse
      */
-    public function get(): RateLimitResponse
+    public function get(): UserResponse
     {
         $response = (new Client())->sendRequest(
             new Request(
-                'https://api.github.com/rate_limit',
+                'https://api.github.com/user',
                 Request::METHOD_GET,
                 Configure::consume('Github'),
             )
@@ -31,7 +31,7 @@ final class RateLimit implements RateLimitInterface
             throw new RuntimeException();
         }
 
-        return new RateLimitResponse(
+        return new UserResponse(
             json_decode($response->getBody()->getContents())
         );
     }

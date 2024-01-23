@@ -17,8 +17,8 @@ declare(strict_types=1);
 namespace App\Controller\Api\Github;
 
 use App\Controller\AppController;
-use App\Utility\Github\RateLimit;
-use App\Utility\Github\RateLimitInterface;
+use App\Utility\Github\RateLimit\RateLimit;
+use App\Utility\Github\RateLimit\RateLimitInterface;
 
 /**
  * RateLimitController
