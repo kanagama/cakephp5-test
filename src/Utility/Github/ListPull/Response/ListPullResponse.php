@@ -6,7 +6,7 @@ namespace App\Utility\Github\ListPull\Response;
 use stdClass;
 
 /**
- *
+ * @author k-nagama <k.nagama0632@gmail.com>
  */
 final class ListPullResponse
 {

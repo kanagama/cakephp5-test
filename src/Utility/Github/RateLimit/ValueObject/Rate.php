@@ -8,6 +8,8 @@ namespace App\Utility\Github\RateLimit\ValueObject;
  * @property-read int $used
  * @property-read int $remaining
  * @property-read int $reset
+ *
+ * @author k-nagama <k.nagama0632@gmail.com>
  */
 final class Rate
 {

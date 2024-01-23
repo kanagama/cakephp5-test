@@ -28,6 +28,8 @@ use stdClass;
  * @property-read Scim $scim
  * @property-read Search $search
  * @property-read SourceImport $sourceImport
+ *
+ * @author k-nagama <k.nagama0632@gmail.com>
  */
 final class Resources
 {

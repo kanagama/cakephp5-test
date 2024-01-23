@@ -50,6 +50,7 @@ return function (RouteBuilder $routes): void {
     $routes->setRouteClass(DashedRoute::class);
 
     $routes->scope('/api/github', function (RouteBuilder $routes): void {
+        $routes->connect('/list_pull', ['prefix' => 'Api/Github', 'controller' => 'ListPull', 'action' => 'index',]);
         $routes->connect('/rate_limit', ['prefix' => 'Api/Github', 'controller' => 'RateLimit', 'action' => 'index',]);
         $routes->connect('/user', ['prefix' => 'Api/Github', 'controller' => 'User', 'action' => 'index',]);
     });

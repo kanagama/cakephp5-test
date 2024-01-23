@@ -4,16 +4,16 @@ declare(strict_types=1);
 namespace App\Utility\Github\ListPull;
 
 use App\Utility\Github\ListPull\Request\ListPullRequest;
-use App\Utility\Github\ListPull\Response\ListPullResponse;
+use Cake\Collection\Collection;
 
 /**
- *
+ * @author k-nagama <k.nagama0632@gmail.com>
  */
 interface ListPullInterface
 {
     /**
      * @param  ListPullRequest  $request
-     * @return ListPullResponse
+     * @return Collection
      */
-    public function get(ListPullRequest $request): ListPullResponse;
+    public function get(ListPullRequest $request): Collection;
 }

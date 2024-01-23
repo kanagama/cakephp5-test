@@ -8,6 +8,8 @@ use RuntimeException;
 
 /**
  * ユーザー情報を取得する
+ *
+ * @author k-nagama <k.nagama0632@gmail.com>
  */
 interface UserInterface
 {

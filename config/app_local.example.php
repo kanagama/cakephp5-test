@@ -64,13 +64,13 @@ return [
          * The test connection is used during the test suite.
          */
         'test' => [
-            'host' => 'localhost',
-            //'port' => 'non_standard_port_number',
+            'host'     => 'localhost',
+            // 'port'     => 'non_standard_port_number',
             'username' => 'my_app',
             'password' => 'secret',
             'database' => 'test_myapp',
-            //'schema' => 'myapp',
-            'url' => env('DATABASE_TEST_URL', 'sqlite://127.0.0.1/tmp/tests.sqlite'),
+            // 'schema'    => 'myapp',
+            'url'      => env('DATABASE_TEST_URL', 'sqlite://127.0.0.1/tmp/tests.sqlite'),
         ],
     ],
 
@@ -83,12 +83,22 @@ return [
      */
     'EmailTransport' => [
         'default' => [
-            'host' => 'localhost',
-            'port' => 25,
+            'host'     => 'localhost',
+            'port'     => 25,
             'username' => null,
             'password' => null,
-            'client' => null,
-            'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
+            'client'   => null,
+            'url'      => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
         ],
+    ],
+
+    'Github' => [
+        'requestHeader' => [
+            'Accept'               => 'application/vnd.github+json',
+            'Authorization'        => 'Bearer ' . env('GITHUB_TOKEN'),
+            'X-GitHub-Api-Version' => '2022-11-28',
+        ],
+        'repository' => '',
+        'owner'      => '',
     ],
 ];

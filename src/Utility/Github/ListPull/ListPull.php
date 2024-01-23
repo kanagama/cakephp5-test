@@ -5,6 +5,7 @@ namespace App\Utility\Github\ListPull;
 
 use App\Utility\Github\ListPull\Request\ListPullRequest;
 use App\Utility\Github\ListPull\Response\ListPullResponse;
+use Cake\Collection\Collection;
 use Cake\Core\Configure;
 use Cake\Http\Client;
 use Cake\Http\Client\Request;
@@ -12,17 +13,19 @@ use Cake\Http\Client\Response;
 use RuntimeException;
 
 /**
- * Undocumented class
+ * プルリクエストの一覧
+ *
+ * @author k-nagama <k.nagama0632@gmail.com>
  */
 final class ListPull implements ListPullInterface
 {
     /**
-     * Undocumented function
+     * プルリクエストの一覧を取得
      *
      * @param ListPullRequest $request
-     * @return ListPullResponse
+     * @return Collection
      */
-    public function get(ListPullRequest $request): ListPullResponse
+    public function get(ListPullRequest $request): Collection
     {
         $response = (new Client())->sendRequest(
             new Request(
@@ -37,8 +40,11 @@ final class ListPull implements ListPullInterface
             throw new RuntimeException();
         }
 
-        return new ListPullResponse(
-            json_decode($response->getBody()->getContents())
-        );
+        $collection = [];
+        foreach (json_decode($response->getBody()->getContents()) as $pull) {
+            $$collection[] = new ListPullResponse($pull);
+        }
+
+        return new Collection($collection);
     }
 }

@@ -7,7 +7,7 @@ use App\Utility\Github\ListPull\Request\ValueObject\State;
 use Cake\TestSuite\TestCase;
 
 /**
- *
+ * @author k-nagama <k.nagama0632@gmail.com>
  */
 class StateTest extends TestCase
 {

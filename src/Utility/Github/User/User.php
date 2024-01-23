@@ -12,6 +12,8 @@ use RuntimeException;
 
 /**
  * githubユーザ情報を取得する
+ *
+ * @author k-nagama <k.nagama0632@gmail.com>
  */
 final class User implements UserInterface
 {

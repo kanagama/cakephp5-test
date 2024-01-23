@@ -39,6 +39,8 @@ use stdClass;
  * @property-read int $following フォロー数
  * @property-read Datetime $created_at 登録日時
  * @property-read Datetime $updated_at 更新日時
+ *
+ * @author k-nagama <k.nagama0632@gmail.com>
  */
 final class UserResponse
 {

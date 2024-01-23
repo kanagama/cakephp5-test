@@ -17,6 +17,8 @@ use App\Utility\Github\ListPull\Request\ValueObject\State;
  * @property-read Direction|null $direction 並び順昇降オブジェクト
  * @property-read int|null $perPage ページ毎の件数
  * @property-read int|null $page ページ番号
+ *
+ * @author k-nagama <k.nagama0632@gmail.com>
  */
 final Class ListPullRequest
 {

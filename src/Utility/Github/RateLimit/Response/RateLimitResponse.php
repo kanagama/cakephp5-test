@@ -10,6 +10,8 @@ use stdClass;
 /**
  * @property-read Rate $rate
  * @property-read Resources $resources
+ *
+ * @author k-nagama <k.nagama0632@gmail.com>
  */
 final class RateLimitResponse
 {

@@ -17,21 +17,26 @@ declare(strict_types=1);
 namespace App\Controller\Api\Github;
 
 use App\Controller\AppController;
-use App\Utility\Github\RateLimit\RateLimit;
-use App\Utility\Github\RateLimit\RateLimitInterface;
+use App\Utility\Github\ListPull\ListPull;
+use App\Utility\Github\ListPull\ListPullInterface;
+use App\Utility\Github\ListPull\Request\ListPullRequest;
 
 /**
  * @author k-nagama <k.nagama0632@gmail.com>
  */
-class RateLimitController extends AppController
+class ListPullController extends AppController
 {
     /**
-     * @param  RateLimit  $rateLimit
+     * @param  ListPull  $listPull
      */
     public function index(
-        RateLimitInterface $rateLimit
+        ListPullInterface $listPull
     ) {
-        $response = $rateLimit->get();
+        $request = new ListPullRequest(
+            $this->request->getQuery()
+        );
+
+        $response = $listPull->get($request);
         dd($response);
     }
 }

@@ -21,9 +21,7 @@ use App\Utility\Github\User\User;
 use App\Utility\Github\User\UserInterface;
 
 /**
- * RateLimitController
- *
- * Controller used by ExceptionRenderer to render error responses.
+ * @author k-nagama <k.nagama0632@gmail.com>
  */
 class UserController extends AppController
 {

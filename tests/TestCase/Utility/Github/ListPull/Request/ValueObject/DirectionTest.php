@@ -7,7 +7,7 @@ use App\Utility\Github\ListPull\Request\ValueObject\Direction;
 use Cake\TestSuite\TestCase;
 
 /**
- *
+ * @author k-nagama <k.nagama0632@gmail.com>
  */
 class DirectionTest extends TestCase
 {

@@ -9,6 +9,8 @@ use InvalidArgumentException;
  * 並び順昇降
  *
  * @property-read string $value 格納された値
+ *
+ * @author k-nagama <k.nagama0632@gmail.com>
  */
 final class Direction
 {

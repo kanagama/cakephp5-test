@@ -7,7 +7,7 @@ use App\Utility\Github\ListPull\Request\ValueObject\Sort;
 use Cake\TestSuite\TestCase;
 
 /**
- *
+ * @author k-nagama <k.nagama0632@gmail.com>
  */
 class SortTest extends TestCase
 {
