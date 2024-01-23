@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Utility\Github\RateLimit;
 
@@ -23,7 +24,7 @@ final class RateLimit implements RateLimitInterface
             new Request(
                 'https://api.github.com/rate_limit',
                 Request::METHOD_GET,
-                Configure::consume('Github'),
+                Configure::consume('Github.requestHeader'),
             )
         );
 

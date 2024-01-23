@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Utility\Github\User;
 
@@ -23,7 +24,7 @@ final class User implements UserInterface
             new Request(
                 'https://api.github.com/user',
                 Request::METHOD_GET,
-                Configure::consume('Github'),
+                Configure::consume('Github.requestHeader'),
             )
         );
 

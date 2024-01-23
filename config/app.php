@@ -419,8 +419,12 @@ return [
     ],
 
     'Github' => [
-        'Accept'               => 'application/vnd.github+json',
-        'Authorization'        => 'Bearer ' . env('GITHUB_TOKEN'),
-        'X-GitHub-Api-Version' => '2022-11-28',
+        'requestHeader' => [
+            'Accept'               => 'application/vnd.github+json',
+            'Authorization'        => 'Bearer ' . env('GITHUB_TOKEN'),
+            'X-GitHub-Api-Version' => '2022-11-28',
+        ],
+        'repository' => '',
+        'owner' => '',
     ],
 ];
