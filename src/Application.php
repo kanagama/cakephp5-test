@@ -16,12 +16,7 @@ declare(strict_types=1);
  */
 namespace App;
 
-use App\Utility\Github\ListPull\ListPull;
-use App\Utility\Github\ListPull\ListPullInterface;
-use App\Utility\Github\RateLimit\RateLimit;
-use App\Utility\Github\RateLimit\RateLimitInterface;
-use App\Utility\Github\User\User;
-use App\Utility\Github\User\UserInterface;
+use App\ServiceProvider\GithubServiceProvider;
 use Cake\Core\Configure;
 use Cake\Core\ContainerInterface;
 use Cake\Datasource\FactoryLocator;
@@ -109,8 +104,6 @@ class Application extends BaseApplication
      */
     public function services(ContainerInterface $container): void
     {
-        $container->add(ListPullInterface::class, ListPull::class);
-        $container->add(RateLimitInterface::class, RateLimit::class);
-        $container->add(UserInterface::class, User::class);
+        $container->addServiceProvider(new GithubServiceProvider());
     }
 }

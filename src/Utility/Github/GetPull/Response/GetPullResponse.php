@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace App\Utility\Github\GetPull\Response;
 
@@ -25,18 +26,18 @@ use stdClass;
  * @property-read Datetime|null $closed_at クローズ時間
  * @property-read Datetime|null $merged_at マージ時間
  * @property-read string $merge_commit_sha マージコミットハッシュ
- * @property-read string|null assignee
- * @property-read string[] assignees => [ ]
-requested_reviewers => [ ]
-requested_teams => [ ]
-labels => [ ]
-milestone => null
-draft => false
-commits_url => 'https://api.github.com/repos/kanagama/laravel-add-formrequest-accessor/pulls/24/commits'
-review_comments_url => 'https://api.github.com/repos/kanagama/laravel-add-formrequest-accessor/pulls/24/comments'
-review_comment_url => 'https://api.github.com/repos/kanagama/laravel-add-formrequest-accessor/pulls/comments{/number}'
-comments_url => 'https://api.github.com/repos/kanagama/laravel-add-formrequest-accessor/issues/24/comments'
-statuses_url => 'https://api.github.com/repos/kanagama/laravel-add-formrequest-accessor/statuses/ea3f6113dcfcc654c3ec178af02cabb424b1f274'
+ * @property-read string|null $assignee
+ * @property-read string[] a$ssignees
+ * @property-read string[] $requested_reviewers
+ * @property-read string[] $requested_teams
+ * @property-read string[] $labels
+ * @property-read string|null $milestone
+ * @property-read bool $draft ドラフトプルリク判定
+ * @property-read string $commits_url
+ * @property-read string $review_comments_url
+ * @property-read string $review_comment_url
+ * @property-read string $comments_url
+ * @property-read string $statuses_url
 head => object(stdClass) id:2 {
 label => 'kanagama:expire_comment'
 ref => 'expire_comment'
@@ -61,9 +62,9 @@ review_comment => object(stdClass) id:18 { }
 commits => object(stdClass) id:19 { }
 statuses => object(stdClass) id:20 { }
 }
-author_association => 'OWNER'
-auto_merge => null
-active_lock_reason => null
+ * @property-read string $author_association => 'OWNER'
+ * @property-read bool|null $auto_merge => null
+ * @property-read string|null $active_lock_reason => null
  *
  * @author k-nagama <k-nagama@se-ec.co.jp>
  */
