@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace Test\TestCase\Utility\Github\ListPull\Request\ValueObject;
+namespace Test\TestCase\Utility\Github\Pulls\ListPull\Request\ValueObject;
 
-use App\Utility\Github\ListPull\Request\ValueObject\State;
+use App\Utility\Github\Pulls\ListPull\Request\ValueObject\State;
 use Cake\TestSuite\TestCase;
 
 /**

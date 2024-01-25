@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Utility\Github\ListPull\Request\ValueObject;
+namespace App\Utility\Github\Pulls\ListPull\Request\ValueObject;
 
 use InvalidArgumentException;
 

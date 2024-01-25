@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Utility\Github\GetPull\Response;
+namespace App\Utility\Github\Pulls\GetPull\Response;
 
 use App\Utility\Github\User\Response\UserResponse;
 use Cake\I18n\DateTime;

@@ -1,10 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Utility\Github\ListPull;
+namespace App\Utility\Github\Pulls\ListPull;
 
-use App\Utility\Github\ListPull\Request\ListPullRequest;
-use App\Utility\Github\ListPull\Response\ListPullResponse;
+use App\Utility\Github\Pulls\ListPull\ListPullInterface;
+use App\Utility\Github\Pulls\ListPull\Request\ListPullRequest;
+use App\Utility\Github\Pulls\ListPull\Response\ListPullResponse;
 use Cake\Collection\Collection;
 use Cake\Core\Configure;
 use Cake\Http\Client;

@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Utility\Github\ListPull;
+namespace App\Utility\Github\Pulls\ListPull;
 
-use App\Utility\Github\ListPull\Request\ListPullRequest;
+use App\Utility\Github\Pulls\ListPull\Request\ListPullRequest;
 use Cake\Collection\Collection;
 
 /**

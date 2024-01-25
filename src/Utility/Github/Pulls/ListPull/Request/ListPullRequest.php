@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Utility\Github\ListPull\Request;
+namespace App\Utility\Github\Pulls\ListPull\Request;
 
-use App\Utility\Github\ListPull\Request\ValueObject\Direction;
-use App\Utility\Github\ListPull\Request\ValueObject\Sort;
-use App\Utility\Github\ListPull\Request\ValueObject\State;
+use App\Utility\Github\Pulls\ListPull\Request\ValueObject\Direction;
+use App\Utility\Github\Pulls\ListPull\Request\ValueObject\Sort;
+use App\Utility\Github\Pulls\ListPull\Request\ValueObject\State;
 
 /**
  * ListPull パラメータ

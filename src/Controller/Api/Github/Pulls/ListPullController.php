@@ -14,12 +14,12 @@ declare(strict_types=1);
  * @since         3.3.4
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
-namespace App\Controller\Api\Github;
+namespace App\Controller\Api\Github\Pulls;
 
 use App\Controller\AppController;
-use App\Utility\Github\ListPull\ListPull;
-use App\Utility\Github\ListPull\ListPullInterface;
-use App\Utility\Github\ListPull\Request\ListPullRequest;
+use App\Utility\Github\Pulls\ListPull\ListPull;
+use App\Utility\Github\Pulls\ListPull\ListPullInterface;
+use App\Utility\Github\Pulls\ListPull\Request\ListPullRequest;
 
 /**
  * @author k-nagama <k.nagama0632@gmail.com>
