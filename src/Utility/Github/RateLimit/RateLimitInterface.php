@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace App\Utility\Github\RateLimit;
 
 use App\Utility\Github\RateLimit\Response\RateLimitResponse;
-use RuntimeException;
 
 /**
  * 認証済みユーザのレート制限ステータスを取得する
@@ -14,8 +13,8 @@ use RuntimeException;
 interface RateLimitInterface
 {
     /**
-     * @return RateLimitResponse
-     * @throws RuntimeException
+     * @return \App\Utility\Github\RateLimit\Response\RateLimitResponse;
+     * @throws \RuntimeException
      */
     public function get(): RateLimitResponse;
 }

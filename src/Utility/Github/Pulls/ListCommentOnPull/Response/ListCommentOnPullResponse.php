@@ -8,5 +8,4 @@ namespace App\Utility\Pulls\ListCommentOnPull\Response;
  */
 final class ListCommentOnPullResponse
 {
-
 }

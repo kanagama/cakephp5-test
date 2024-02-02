@@ -17,7 +17,6 @@ declare(strict_types=1);
 namespace App\Controller\Api\Github\Pulls;
 
 use App\Controller\AppController;
-use App\Utility\Github\Pulls\ListPull\ListPull;
 use App\Utility\Github\Pulls\ListPull\ListPullInterface;
 use App\Utility\Github\Pulls\ListPull\Request\ListPullRequest;
 
@@ -27,11 +26,11 @@ use App\Utility\Github\Pulls\ListPull\Request\ListPullRequest;
 class ListPullController extends AppController
 {
     /**
-     * @param  ListPull  $listPull
+     * @param \App\Utility\Github\Pulls\ListPull\ListPull $listPull
      */
     public function index(
         ListPullInterface $listPull
-    ) {
+    ): void {
         $request = new ListPullRequest(
             $this->request->getQuery()
         );

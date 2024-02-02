@@ -11,7 +11,7 @@ use App\Utility\Github\Pulls\GetPull\Response\GetPullResponse;
 interface GetPullInterface
 {
     /**
-     * @return GetPullResponse
+     * @return \App\Utility\Github\Pulls\GetPull\Response\GetPullResponse
      */
     public function get(): GetPullResponse;
 }

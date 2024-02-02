@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace App\Utility\Github\Pulls\ListPull;
 
-use App\Utility\Github\Pulls\ListPull\ListPullInterface;
 use App\Utility\Github\Pulls\ListPull\Request\ListPullRequest;
 use App\Utility\Github\Pulls\ListPull\Response\ListPullResponse;
 use Cake\Collection\Collection;
@@ -23,14 +22,15 @@ final class ListPull implements ListPullInterface
     /**
      * プルリクエストの一覧を取得
      *
-     * @param ListPullRequest $request
-     * @return Collection
+     * @param \App\Utility\Github\Pulls\ListPull\Request\ListPullRequest $request
+     * @return \Cake\Collection\Collection
      */
     public function get(ListPullRequest $request): Collection
     {
         $response = (new Client())->sendRequest(
             new Request(
-                'https://api.github.com/repos/' . Configure::consume('Github.owner'). '/' . Configure::consume('Github.repository') . '/pulls',
+                'https://api.github.com/repos/'
+                    . Configure::consume('Github.owner') . '/' . Configure::consume('Github.repository') . '/pulls',
                 Request::METHOD_GET,
                 Configure::consume('Github.requestHeader'),
                 $request->toArray(),

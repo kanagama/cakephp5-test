@@ -11,10 +11,10 @@ use stdClass;
 final class ListPullResponse
 {
     /**
-     * @param  StdClass  $response
+     * @param \StdClass $response
      */
     public function __construct(StdClass $response)
     {
-
+        dd($response);
     }
 }

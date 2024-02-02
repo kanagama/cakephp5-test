@@ -13,7 +13,7 @@ use App\Utility\Pulls\ListCommentOnPull\Response\ListCommentOnPullResponse;
 interface ListCommentOnPullInterface
 {
     /**
-     * @return ListCommentOnPullResponse
+     * @return \App\Utility\Pulls\ListCommentOnPull\Response\ListCommentOnPullResponse
      */
     public function get(): ListCommentOnPullResponse;
 }

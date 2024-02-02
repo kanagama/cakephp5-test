@@ -8,25 +8,24 @@ use App\Utility\Github\RateLimit\ValueObject\Resources;
 use stdClass;
 
 /**
- * @property-read Rate $rate
- * @property-read Resources $resources
- *
+ * @property-read \App\Utility\Github\RateLimit\ValueObject\Rate $rate
+ * @property-read \App\Utility\Github\RateLimit\ValueObject\Resources $resources
  * @author k-nagama <k.nagama0632@gmail.com>
  */
 final class RateLimitResponse
 {
     /**
-     * @var Rate
+     * @var \App\Utility\Github\RateLimit\ValueObject\Rate
      */
     public readonly Rate $rate;
 
     /**
-     * @var Resources
+     * @var \App\Utility\Github\RateLimit\ValueObject\Resources
      */
     public readonly Resources $resources;
 
     /**
-     * @param  stdClass  $response
+     * @param \stdClass $response
      */
     public function __construct(
         stdClass $response

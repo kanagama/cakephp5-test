@@ -8,16 +8,15 @@ namespace App\Utility\Github\RateLimit\ValueObject;
  * @property-read int $used
  * @property-read int $remaining
  * @property-read int $reset
- *
  * @author k-nagama <k.nagama0632@gmail.com>
  */
 final class Search
 {
     /**
-     * @param  int  $limit
-     * @param  int  $used
-     * @param  int  $remaining
-     * @param  int  $reset
+     * @param int $limit
+     * @param int $used
+     * @param int $remaining
+     * @param int $reset
      */
     public function __construct(
         public readonly int $limit,
