@@ -17,7 +17,6 @@ declare(strict_types=1);
 namespace App\Controller\Api\Github;
 
 use App\Controller\AppController;
-use App\Utility\Github\RateLimit\RateLimit;
 use App\Utility\Github\RateLimit\RateLimitInterface;
 
 /**
@@ -26,7 +25,7 @@ use App\Utility\Github\RateLimit\RateLimitInterface;
 class RateLimitController extends AppController
 {
     /**
-     * @param  RateLimit  $rateLimit
+     * @param \App\Utility\Github\RateLimit\RateLimit $rateLimit
      */
     public function index(
         RateLimitInterface $rateLimit

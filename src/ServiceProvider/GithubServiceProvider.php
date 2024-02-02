@@ -3,12 +3,12 @@ declare(strict_types=1);
 
 namespace App\ServiceProvider;
 
-use App\Utility\Github\User\User;
-use App\Utility\Github\User\UserInterface;
-use App\Utility\Github\ListPull\ListPull;
-use App\Utility\Github\ListPull\ListPullInterface;
+use App\Utility\Github\Pulls\ListPull\ListPull;
+use App\Utility\Github\Pulls\ListPull\ListPullInterface;
 use App\Utility\Github\RateLimit\RateLimit;
 use App\Utility\Github\RateLimit\RateLimitInterface;
+use App\Utility\Github\User\User;
+use App\Utility\Github\User\UserInterface;
 use Cake\Core\ContainerInterface;
 use Cake\Core\ServiceProvider;
 
@@ -32,7 +32,7 @@ class GithubServiceProvider extends ServiceProvider
     ];
 
     /**
-     * @param  ContainerInterface  $container
+     * @param \Cake\Core\ContainerInterface $container
      */
     public function services(ContainerInterface $container): void
     {

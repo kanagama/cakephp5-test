@@ -3,11 +3,11 @@ declare(strict_types=1);
 
 namespace App\Utility\Github\User;
 
+use App\Utility\Github\User\Response\UserResponse;
 use Cake\Core\Configure;
 use Cake\Http\Client;
 use Cake\Http\Client\Request;
 use Cake\Http\Client\Response;
-use App\Utility\Github\User\Response\UserResponse;
 use RuntimeException;
 
 /**
@@ -18,7 +18,7 @@ use RuntimeException;
 final class User implements UserInterface
 {
     /**
-     * @return UserResponse
+     * @return \App\Utility\Github\User\Response\UserResponse
      */
     public function get(): UserResponse
     {

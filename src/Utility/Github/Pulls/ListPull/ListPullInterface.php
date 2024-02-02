@@ -12,8 +12,8 @@ use Cake\Collection\Collection;
 interface ListPullInterface
 {
     /**
-     * @param  ListPullRequest  $request
-     * @return Collection
+     * @param \App\Utility\Github\Pulls\ListPull\Request\ListPullRequest $request
+     * @return \Cake\Collection\Collection
      */
     public function get(ListPullRequest $request): Collection;
 }

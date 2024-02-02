@@ -3,8 +3,6 @@ declare(strict_types=1);
 
 namespace App\Utility\Github\Pulls\GetPull\Response;
 
-use App\Utility\Github\User\Response\UserResponse;
-use Cake\I18n\DateTime;
 use stdClass;
 
 /**
@@ -19,12 +17,12 @@ use stdClass;
  * @property-read string $state プルリク状態
  * @property-read bool $locked
  * @property-read string $title プルリクタイトル
- * @property-read UserResponse $user
+ * @property-read \App\Utility\Github\User\Response\UserResponse $user
  * @property-read string|null $body
- * @property-read Datetime $created_at 登録日時
- * @property-read Datetime $updated_at 更新日時
- * @property-read Datetime|null $closed_at クローズ時間
- * @property-read Datetime|null $merged_at マージ時間
+ * @property-read \Cake\I18n\DateTime $created_at 登録日時
+ * @property-read \Cake\I18n\DateTime $updated_at 更新日時
+ * @property-read \Cake\I18n\DateTime|null $closed_at クローズ時間
+ * @property-read \Cake\I18n\DateTime|null $merged_at マージ時間
  * @property-read string $merge_commit_sha マージコミットハッシュ
  * @property-read string|null $assignee
  * @property-read string[] a$ssignees
@@ -65,18 +63,19 @@ statuses => object(stdClass) id:20 { }
  * @property-read string $author_association => 'OWNER'
  * @property-read bool|null $auto_merge => null
  * @property-read string|null $active_lock_reason => null
- *
  * @author k-nagama <k-nagama@se-ec.co.jp>
  */
 final class GetPullResponse
 {
+    /**
+     * @var int
+     */
     private readonly int $id;
 
     /**
-     * @param  stdClass  $response
+     * @param \stdClass $response
      */
     public function __construct(stdClass $response)
     {
-
     }
 }
