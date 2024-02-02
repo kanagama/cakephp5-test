@@ -29,7 +29,7 @@ class UserController extends AppController
      */
     public function index(
         UserInterface $user
-    ) {
+    ): void {
         $response = $user->get();
         dd($response);
     }

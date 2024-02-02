@@ -12,10 +12,10 @@ use stdClass;
 final class GetPull implements GetPullInterface
 {
     /**
-     * @return \App\Utility\Github\Pulls\GetPull\Response\
+     * @return \App\Utility\Github\Pulls\GetPull\Response\GetPullResponse
      */
     public function get(): GetPullResponse
     {
-        return new GetPullResponse(new stdClass([]));
+        return new GetPullResponse(new stdClass());
     }
 }

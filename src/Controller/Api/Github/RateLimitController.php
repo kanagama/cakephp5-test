@@ -29,7 +29,7 @@ class RateLimitController extends AppController
      */
     public function index(
         RateLimitInterface $rateLimit
-    ) {
+    ): void {
         $response = $rateLimit->get();
         dd($response);
     }

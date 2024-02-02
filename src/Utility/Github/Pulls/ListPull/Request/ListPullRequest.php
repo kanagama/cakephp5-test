@@ -22,7 +22,7 @@ use App\Utility\Github\Pulls\ListPull\Request\ValueObject\State;
 final class ListPullRequest
 {
     /**
-     * @var array
+     * @var array<string,mixed>
      */
     private readonly array $params;
 
@@ -47,7 +47,7 @@ final class ListPullRequest
     public readonly ?Sort $sort;
 
     /**
-     * @var \\App\Utility\Github\Pulls\ListPull\Request\ValueObject\Direction|null
+     * @var \App\Utility\Github\Pulls\ListPull\Request\ValueObject\Direction|null
      */
     public readonly ?Direction $direction;
 
@@ -62,45 +62,47 @@ final class ListPullRequest
     public readonly ?int $page;
 
     /**
-     * @param array $params
+     * @param array<string,mixed> $params
      */
     public function __construct(array $params)
     {
-        $this->params = [];
+        $this->params = !empty($params)
+            ? $params
+            : [];
 
-        if (empty($params)) {
-            return;
-        }
+        $this->state = !empty($params['state'])
+            ? new State($params['state'])
+            : null;
 
-        $this->params = $params;
+        $this->head = !empty($params['head'])
+            ? $params['head']
+            : null;
 
-        if (!empty($params['state'])) {
-            $this->state = new State($params['state']);
-        }
-        if (!empty($params['head'])) {
-            $this->head = $params['head'];
-        }
-        if (!empty($params['base'])) {
-            $this->base = $params['base'];
-        }
-        if (!empty($params['sort'])) {
-            $this->sort = new Sort($params['sort']);
-        }
-        if (!empty($params['direction'])) {
-            $this->direction = new Direction($params['direction']);
-        }
-        if (!empty($params['per_page'] && is_numeric($params['per_page']))) {
-            $this->perPage = (int)$params['per_page'];
-        }
-        if (!empty($params['page'] && is_numeric($params['page']))) {
-            $this->page = (int)$params['page'];
-        }
+        $this->base = !empty($params['base'])
+            ? $params['base']
+            : null;
+
+        $this->sort = !empty($params['sort'])
+            ? new Sort($params['sort'])
+            : null;
+
+        $this->direction = !empty($params['direction'])
+            ? new Direction($params['direction'])
+            : null;
+
+        $this->perPage = (!empty($params['per_page'] && is_numeric($params['per_page'])))
+            ? (int)$params['per_page']
+            : null;
+
+        $this->page = (!empty($params['page'] && is_numeric($params['page'])))
+            ? (int)$params['page']
+            : null;
     }
 
     /**
      * 配列データを取得
      *
-     * @return array
+     * @return array<string,mixed>
      */
     public function toArray(): array
     {

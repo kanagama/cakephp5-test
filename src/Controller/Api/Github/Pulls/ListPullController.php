@@ -30,7 +30,7 @@ class ListPullController extends AppController
      */
     public function index(
         ListPullInterface $listPull
-    ) {
+    ): void {
         $request = new ListPullRequest(
             $this->request->getQuery()
         );

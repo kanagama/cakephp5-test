@@ -57,7 +57,7 @@ final class Resources
     public readonly Graphql $graphql;
 
     /**
-     * @var \App\Utility\Github\RateLimit\ValueObject\IntegrationManifes
+     * @var \App\Utility\Github\RateLimit\ValueObject\IntegrationManifest
      */
     public readonly IntegrationManifest $integrationManifest;
 

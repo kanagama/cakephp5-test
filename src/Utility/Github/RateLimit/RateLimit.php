@@ -18,7 +18,7 @@ use RuntimeException;
 final class RateLimit implements RateLimitInterface
 {
     /**
-     * @return \App\Utility\Github\RateLimit\Response\
+     * @return \App\Utility\Github\RateLimit\Response\RateLimitResponse
      */
     public function get(): RateLimitResponse
     {

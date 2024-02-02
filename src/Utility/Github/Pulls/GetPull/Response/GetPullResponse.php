@@ -25,7 +25,7 @@ use stdClass;
  * @property-read \Cake\I18n\DateTime|null $merged_at マージ時間
  * @property-read string $merge_commit_sha マージコミットハッシュ
  * @property-read string|null $assignee
- * @property-read string[] a$ssignees
+ * @property-read string[] $assignees
  * @property-read string[] $requested_reviewers
  * @property-read string[] $requested_teams
  * @property-read string[] $labels
@@ -60,22 +60,18 @@ review_comment => object(stdClass) id:18 { }
 commits => object(stdClass) id:19 { }
 statuses => object(stdClass) id:20 { }
 }
- * @property-read string $author_association => 'OWNER'
- * @property-read bool|null $auto_merge => null
- * @property-read string|null $active_lock_reason => null
+ * @property-read string $author_association
+ * @property-read bool|null $auto_merge
+ * @property-read string|null $active_lock_reason
  * @author k-nagama <k-nagama@se-ec.co.jp>
  */
 final class GetPullResponse
 {
     /**
-     * @var int
-     */
-    private readonly int $id;
-
-    /**
      * @param \stdClass $response
      */
     public function __construct(stdClass $response)
     {
+        dd($response);
     }
 }
