@@ -90,11 +90,11 @@ final class ListPullRequest
             ? new Direction($params['direction'])
             : null;
 
-        $this->perPage = (!empty($params['per_page'] && is_numeric($params['per_page'])))
+        $this->perPage = !empty($params['per_page'] && is_numeric($params['per_page']))
             ? (int)$params['per_page']
             : null;
 
-        $this->page = (!empty($params['page'] && is_numeric($params['page'])))
+        $this->page = !empty($params['page'] && is_numeric($params['page']))
             ? (int)$params['page']
             : null;
     }

@@ -18,7 +18,7 @@ use Cake\Core\ServiceProvider;
 class GithubServiceProvider extends ServiceProvider
 {
     /**
-     * @var string[]
+     * @var array<string>
      */
     protected array $provides = [
         User::class,
