@@ -37,9 +37,8 @@ use stdClass;
  * @property-read int $public_gists
  * @property-read int $followers フォロワー数
  * @property-read int $following フォロー数
- * @property-read Datetime $created_at 登録日時
- * @property-read Datetime $updated_at 更新日時
- *
+ * @property-read \Cake\I18n\DateTime $created_at 登録日時
+ * @property-read \Cake\I18n\DateTime $updated_at 更新日時
  * @author k-nagama <k.nagama0632@gmail.com>
  */
 final class UserResponse
@@ -52,7 +51,7 @@ final class UserResponse
 
     public readonly string $avatar_url;
 
-    public readonly string|null $gravatar_id;
+    public readonly ?string $gravatar_id;
 
     public readonly string $url;
 
@@ -82,19 +81,19 @@ final class UserResponse
 
     public readonly string $name;
 
-    public readonly string|null $company;
+    public readonly ?string $company;
 
     public readonly string $blog;
 
     public readonly string $location;
 
-    public readonly string|null $email;
+    public readonly ?string $email;
 
-    public readonly string|null $hireable;
+    public readonly ?string $hireable;
 
     public readonly string $bio;
 
-    public readonly string|null $twitter_username;
+    public readonly ?string $twitter_username;
 
     public readonly int $public_repos;
 
@@ -109,7 +108,7 @@ final class UserResponse
     public readonly Datetime $updated_at;
 
     /**
-     * @param  stdClass  $response
+     * @param \stdClass $response
      */
     public function __construct(
         stdClass $response

@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Utility\Github\ListPull\Response;
+namespace App\Utility\Github\Pulls\ListPull\Response;
 
 use stdClass;
 
@@ -11,10 +11,10 @@ use stdClass;
 final class ListPullResponse
 {
     /**
-     * @param  StdClass  $response
+     * @param \StdClass $response
      */
     public function __construct(StdClass $response)
     {
-
+        dd($response);
     }
 }

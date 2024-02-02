@@ -17,7 +17,6 @@ declare(strict_types=1);
 namespace App\Controller\Api\Github;
 
 use App\Controller\AppController;
-use App\Utility\Github\User\User;
 use App\Utility\Github\User\UserInterface;
 
 /**
@@ -26,11 +25,11 @@ use App\Utility\Github\User\UserInterface;
 class UserController extends AppController
 {
     /**
-     * @param  User  $user
+     * @param \App\Utility\Github\User\User $user
      */
     public function index(
         UserInterface $user
-    ) {
+    ): void {
         $response = $user->get();
         dd($response);
     }

@@ -3,11 +3,11 @@ declare(strict_types=1);
 
 namespace App\Utility\Github\RateLimit;
 
+use App\Utility\Github\RateLimit\Response\RateLimitResponse;
 use Cake\Core\Configure;
 use Cake\Http\Client;
 use Cake\Http\Client\Request;
 use Cake\Http\Client\Response;
-use App\Utility\Github\RateLimit\Response\RateLimitResponse;
 use RuntimeException;
 
 /**
@@ -18,7 +18,7 @@ use RuntimeException;
 final class RateLimit implements RateLimitInterface
 {
     /**
-     * @return RateLimitResponse
+     * @return \App\Utility\Github\RateLimit\Response\RateLimitResponse
      */
     public function get(): RateLimitResponse
     {

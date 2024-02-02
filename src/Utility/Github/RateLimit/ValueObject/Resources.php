@@ -3,93 +3,81 @@ declare(strict_types=1);
 
 namespace App\Utility\Github\RateLimit\ValueObject;
 
-use App\Utility\Github\RateLimit\ValueObject\ActionsRunnerRegistration;
-use App\Utility\Github\RateLimit\ValueObject\AuditLog;
-use App\Utility\Github\RateLimit\ValueObject\CodeScanningUpload;
-use App\Utility\Github\RateLimit\ValueObject\CodeSearch;
-use App\Utility\Github\RateLimit\ValueObject\Core;
-use App\Utility\Github\RateLimit\ValueObject\DependencySnapshots;
-use App\Utility\Github\RateLimit\ValueObject\Graphql;
-use App\Utility\Github\RateLimit\ValueObject\IntegrationManifest;
-use App\Utility\Github\RateLimit\ValueObject\Scim;
-use App\Utility\Github\RateLimit\ValueObject\Search;
-use App\Utility\Github\RateLimit\ValueObject\SourceImport;
 use stdClass;
 
 /**
- * @property-read ActionsRunnerRegistration $actionsRunnerRegistration
- * @property-read AuditLog $auditLog
- * @property-read CodeScanningUpload $codeScanningUpload
- * @property-read CodeSearch $codeSearch
- * @property-read Core $core
- * @property-read DependencySnapshots $dependencySnapshots
- * @property-read Graphql $graphql
- * @property-read IntegrationManifest $integrationManifest
- * @property-read Scim $scim
- * @property-read Search $search
- * @property-read SourceImport $sourceImport
- *
+ * @property-read \App\Utility\Github\RateLimit\ValueObject\ActionsRunnerRegistration $actionsRunnerRegistration
+ * @property-read \App\Utility\Github\RateLimit\ValueObject\AuditLog $auditLog
+ * @property-read \App\Utility\Github\RateLimit\ValueObject\CodeScanningUpload $codeScanningUpload
+ * @property-read \App\Utility\Github\RateLimit\ValueObject\CodeSearch $codeSearch
+ * @property-read \App\Utility\Github\RateLimit\ValueObject\Core $core
+ * @property-read \App\Utility\Github\RateLimit\ValueObject\DependencySnapshots $dependencySnapshots
+ * @property-read \App\Utility\Github\RateLimit\ValueObject\Graphql $graphql
+ * @property-read \App\Utility\Github\RateLimit\ValueObject\IntegrationManifest $integrationManifest
+ * @property-read \App\Utility\Github\RateLimit\ValueObject\Scim $scim
+ * @property-read \App\Utility\Github\RateLimit\ValueObject\Search $search
+ * @property-read \App\Utility\Github\RateLimit\ValueObject\SourceImport $sourceImport
  * @author k-nagama <k.nagama0632@gmail.com>
  */
 final class Resources
 {
     /**
-     * @var ActionsRunnerRegistration
+     * @var \App\Utility\Github\RateLimit\ValueObject\ActionsRunnerRegistration
      */
     public readonly ActionsRunnerRegistration $actionsRunnerRegistration;
 
     /**
-     * @var AuditLog
+     * @var \App\Utility\Github\RateLimit\ValueObject\AuditLog
      */
     public readonly AuditLog $auditLog;
 
     /**
-     * @var CodeScanningUpload
+     * @var \App\Utility\Github\RateLimit\ValueObject\CodeScanningUpload
      */
     public readonly CodeScanningUpload $codeScanningUpload;
 
     /**
-     * @var CodeSearch
+     * @var \App\Utility\Github\RateLimit\ValueObject\CodeSearch
      */
     public readonly CodeSearch $codeSearch;
 
     /**
-     * @var Core
+     * @var \App\Utility\Github\RateLimit\ValueObject\Core
      */
     public readonly Core $core;
 
     /**
-     * @var DependencySnapshots
+     * @var \App\Utility\Github\RateLimit\ValueObject\DependencySnapshots
      */
     public readonly DependencySnapshots $dependencySnapshots;
 
     /**
-     * @var Graphql
+     * @var \App\Utility\Github\RateLimit\ValueObject\Graphql
      */
     public readonly Graphql $graphql;
 
     /**
-     * @var IntegrationManifest
+     * @var \App\Utility\Github\RateLimit\ValueObject\IntegrationManifest
      */
     public readonly IntegrationManifest $integrationManifest;
 
     /**
-     * @var Scim
+     * @var \App\Utility\Github\RateLimit\ValueObject\Scim
      */
     public readonly Scim $scim;
 
     /**
-     * @var Search
+     * @var \App\Utility\Github\RateLimit\ValueObject\Search
      */
     public readonly Search $search;
 
     /**
-     * @var SourceImport
+     * @var \App\Utility\Github\RateLimit\ValueObject\SourceImport
      */
     public readonly SourceImport $sourceImport;
 
     /**
-     * @param  stdClass  $resources
+     * @param \stdClass $resources
      */
     public function __construct(
         stdClass $resources
