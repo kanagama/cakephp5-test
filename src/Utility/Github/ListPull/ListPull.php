@@ -42,7 +42,7 @@ final class ListPull implements ListPullInterface
 
         $collection = [];
         foreach (json_decode($response->getBody()->getContents()) as $pull) {
-            $$collection[] = new ListPullResponse($pull);
+            $collection[] = new ListPullResponse($pull);
         }
 
         return new Collection($collection);

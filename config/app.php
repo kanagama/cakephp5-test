@@ -231,6 +231,14 @@ return [
             'tls' => false,
             'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
         ],
+
+        'mailtrap' => [
+            'className' => 'Smtp',
+            'host'      => 'sandbox.smtp.mailtrap.io',
+            'port'      => 2525,
+            'username'  => '3b4c1bbcef1f75',
+            'password'  => '1257d197fbacb9',
+        ],
     ],
 
     /*
