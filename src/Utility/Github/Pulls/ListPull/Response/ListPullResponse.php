@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Utility\Github\ListPull\Response;
+namespace App\Utility\Github\Pulls\ListPull\Response;
 
 use App\Utility\Github\User\User;
 use stdClass;
@@ -34,7 +34,7 @@ final class ListPullResponse
     public readonly User $user;
 
     /**
-     * @param  StdClass  $response
+     * @param \StdClass $response
      */
     public function __construct(StdClass $response)
     {

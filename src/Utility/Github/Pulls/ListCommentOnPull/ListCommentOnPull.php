@@ -1,9 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Utility\Github\ListCommentOnPull;
+namespace App\Utility\Github\Pulls\ListCommentOnPull;
 
-use App\Utility\ListCommentOnPull\Response\ListCommentOnPullResponse;
+use App\Utility\Pulls\ListCommentOnPull\Response\ListCommentOnPullResponse;
 
 /**
  * 該当プルリクのコメント一覧を取得する
@@ -13,7 +13,7 @@ use App\Utility\ListCommentOnPull\Response\ListCommentOnPullResponse;
 final class ListCommentOnPull implements ListCommentOnPullInterface
 {
     /**
-     * @return ListCommentOnPullResponse
+     * @return \App\Utility\Pulls\ListCommentOnPull\Response\ListCommentOnPullResponse
      */
     public function get(): ListCommentOnPullResponse
     {
